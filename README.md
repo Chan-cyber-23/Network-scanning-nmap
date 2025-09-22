@@ -9,10 +9,10 @@ Discover open ports on devices in the local network to understand network exposu
 
 ## Steps Performed
 1. Installed Nmap on Kali Linux.
-2. Found local IP range: `172.29.208.1/24`.
+2. Found local IP range: `172.29.208.X/24`.
 3. Ran TCP SYN scan:
    ```bash
-   sudo nmap -sS 172.29.208.1/24
+   sudo nmap -sS 172.29.208.X/24
    ```
 4. Identified live hosts and open ports.
 5. Researched common services running on discovered ports.
@@ -22,12 +22,12 @@ Discover open ports on devices in the local network to understand network exposu
 ## Scan Results
 **Command executed:**
 ```
-sudo nmap -sS 172.29.208.1/24
+sudo nmap -sS 172.29.208.X/24
 ```
 
 **Output (simplified):**
 ```
-Nmap scan report for DESKTOP-07EUH6U (172.29.208.1)
+Nmap scan report for DESKTOP-07EUH6U (172.29.208.X)
 Host is up.
 
 PORT     STATE SERVICE
@@ -51,7 +51,7 @@ Nmap done: 256 IP addresses (1 host up) scanned in 7.24 seconds
 ## How to reproduce the scan
 To save the scan results in text format:
 ```bash
-sudo nmap -sS -sV 172.29.208.1 -oN scan-results.txt
+sudo nmap -sS -sV 172.29.208.X -oN scan-results.txt
 ```
 
 ## Files included in this repo
